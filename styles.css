@@ -1,0 +1,469 @@
+/* ===========================
+   Sake Izakaya — Landing Page
+   =========================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-red: #E30613;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-heading: 'Marcellus', 'Georgia', serif;
+  --font-body: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  background: url('assets/hero-bg.png') center 100% / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark gradient overlay — top */
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero__overlay--bottom {
+  top: auto;
+  bottom: 0;
+  height: 0;
+  background: none;
+}
+
+/* ===========================
+   Content Layout
+   =========================== */
+
+.hero__content {
+  position: relative;
+  bottom: 85px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4vw;
+  width: 60%;
+  max-width: 1150px;
+  margin: 3vh auto 0;
+  padding: 0;
+}
+
+/* ===========================
+   Logo SA KE + IZAKAYA
+   =========================== */
+
+/* Desktop combined logo+firma image */
+.hero__desktop-img {
+  width: 32vw;
+  min-width: 320px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Mobile logo image (hidden on desktop) */
+.hero__mobile-logo {
+  display: none;
+}
+
+.hero__logo {
+  display: none;
+}
+
+/* Hide text logo on desktop (replaced by hero__desktop-img) */
+.logo {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  margin: 0;
+  display: none;
+}
+
+.logo__line {
+  display: block;
+  font-size: 5.7vw;
+}
+
+.logo__sub {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1.15vw;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  color: var(--color-white);
+  display: none;
+}
+
+/* ===========================
+   Center: Signature + Info
+   =========================== */
+
+.hero__center {
+  display: none;
+}
+
+.hero__center-img {
+  display: none;
+}
+
+/* Hide SVG signature on desktop (included in hero__desktop-img) */
+.hero__signature {
+  width: 18.2vw;
+  margin-bottom: -1vw;
+  display: none;
+}
+
+.signature-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  margin-left: 7.3vw;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 1.56vw;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.hero__chef {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1.35vw;
+  color: var(--color-red);
+}
+
+/* ===========================
+   Contact (Right Side)
+   =========================== */
+
+.hero__contact {
+      position: relative;
+    text-align: right;
+    flex-shrink: 0;
+    top: 68px;
+}
+
+/* Desktop contact visible, mobile hidden */
+.hero__contact--desktop {
+  display: block;
+}
+
+.hero__contact--mobile {
+  display: none;
+}
+
+.hero__address {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(12px, 1.05vw, 18px);
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.4rem;
+  white-space: nowrap;
+}
+
+.hero__phone {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(12px, 1.05vw, 18px);
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.hero__phone a:hover {
+  color: var(--color-red);
+  transition: color 0.3s ease;
+}
+
+/* ===========================
+   Red Decorative Line
+   =========================== */
+
+.hero__redline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-red);
+  z-index: 2;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+.hero__footer {
+  position: absolute;
+  bottom: 1.2%;
+  left: 13vw;
+  z-index: 2;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(10px, 0.75vw, 14px);
+  color: var(--color-white);
+  opacity: 0.6;
+  text-align: left;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+
+/* ===========================
+   Responsive — Tablet (≤900px)
+   =========================== */
+
+@media (max-width: 900px) {
+  .hero__content {
+    position: relative;
+    inset: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 10vh 5vw 0;
+    margin-top: 0;
+    gap: 0;
+  }
+
+  .hero__desktop-img {
+    display: none;
+  }
+
+  .hero__contact--desktop {
+    display: none;
+  }
+
+  .hero__contact--mobile {
+    display: block;
+  }
+
+  .hero__logo,
+  .hero__center,
+  .hero__contact {
+    position: static;
+  }
+
+  .hero__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__mobile-logo {
+    display: block;
+    width: 55vw;
+    height: auto;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo__line {
+    font-size: 18vw;
+  }
+
+  .logo__sub {
+    display: none;
+    font-size: 3vw;
+    letter-spacing: 0.38em;
+    margin-top: 0.3rem;
+  }
+
+  .hero__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 4vh;
+  }
+
+  .hero__center-img {
+    display: block;
+    width: 55vw;
+    height: auto;
+  }
+
+  .hero__signature,
+  .hero__info {
+    display: none;
+  }
+
+  .hero__contact--mobile {
+    text-align: center;
+    margin-top: auto;
+    padding-bottom: 3vh;
+    width: 100%;
+  }
+
+  .hero__address {
+    font-size: 2.8vw;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero__phone {
+    font-size: 2.8vw;
+  }
+
+  .hero__footer {
+    display: none;
+  }
+}
+
+/* ===========================
+   Responsive — Mobile (≤480px)
+   Pixel-perfect from mobile.jpeg
+   =========================== */
+
+@media (max-width: 480px) {
+
+  html, body {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  /* Background más alto para dar protagonismo al plato */
+  .hero {
+    background-position: center -15vw;
+    height: 100vh;
+    min-height: unset;
+    overflow: hidden;
+  }
+  .hero__overlay{
+    height: 70%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.45) 85%, rgba(0, 0, 0, 0.1) 35%, transparent 100%);
+  }
+  /* Gradiente inferior: acaba en negro sólido */
+  .hero__overlay--bottom {
+    height: 200px;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.70) 25%,
+      rgba(0, 0, 0, 0.5) 55%,
+      transparent 100%
+    );
+  }
+
+  .hero__content {
+    padding: 3vh 4vw 0;
+    min-height: unset;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Logo: ~30vw como en el mockup */
+  .hero__mobile-logo {
+    width: 33vw;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo__sub {
+    display: none;
+  }
+
+  /* Firma + textos: separación del logo */
+  .hero__center {
+    margin-top: 22vh;
+  }
+
+  .hero__center-img {
+    display: block;
+    width: 80vw;
+    height: auto;
+  }
+
+  .hero__signature,
+  .hero__info {
+    display: none;
+  }
+
+  /* Contacto mobile sobre el gradiente negro */
+  .hero__contact--mobile {
+    z-index: 3;
+    padding-bottom: 2vh;
+    margin-left: 0;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+  }
+
+  .hero__address {
+    font-size: 3.3vw;
+    margin-bottom: 0.4rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .hero__phone {
+    font-size: 3.5vw;
+    font-weight: 600;
+    color: var(--color-white);
+  }
+}

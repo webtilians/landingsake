@@ -1,0 +1,10 @@
+# Adobe XD source files
+landing_limpia.xd/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
