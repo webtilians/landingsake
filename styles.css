@@ -398,6 +398,7 @@ address {
     height: 100dvh;
     min-height: unset;
     overflow: hidden;
+    width: 80vw;
   }
   .hero__overlay{
     height: 70%;
