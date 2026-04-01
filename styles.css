@@ -64,8 +64,8 @@ address {
   top: 0;
   left: 0;
   width: 100%;
-  height: 60%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 100%);
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -102,7 +102,7 @@ address {
 
 /* Desktop combined logo+firma image */
 .hero__desktop-img {
-  width: 32vw;
+  width: 34vw;
   min-width: 320px;
   height: auto;
   flex-shrink: 0;
@@ -398,7 +398,7 @@ address {
     height: 100dvh;
     min-height: unset;
     overflow: hidden;
-    width: 80vw;
+    
   }
   .hero__overlay{
     height: 70%;
@@ -407,13 +407,7 @@ address {
   /* Gradiente inferior: acaba en negro sólido */
   .hero__overlay--bottom {
     height: 200px;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.70) 25%,
-      rgba(0, 0, 0, 0.5) 55%,
-      transparent 100%
-    );
+            background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.97) 25%, rgba(0, 0, 0, 0.4) 55%, transparent 100%);
   }
 
   .hero__content {
@@ -426,7 +420,7 @@ address {
 
   /* Logo: ~30vw como en el mockup */
   .hero__mobile-logo {
-    width: 33vw;
+    width: 25vw;
   }
 
   .logo {
