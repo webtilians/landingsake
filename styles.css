@@ -256,7 +256,7 @@ address {
 .hero__footer {
   position: absolute;
   bottom: 1.2%;
-  left: 13vw;
+  left: 20vw;
   z-index: 2;
   font-family: var(--font-body);
   font-weight: 300;
