@@ -420,7 +420,7 @@ address {
 
   /* Logo: ~30vw como en el mockup */
   .hero__mobile-logo {
-    width: 25vw;
+    width: 30vw;
   }
 
   .logo {
@@ -433,7 +433,7 @@ address {
 
   /* Firma + textos: separación del logo */
   .hero__center {
-    margin-top: 22vh;
+    margin-top: 20vh;
   }
 
   .hero__center-img {
