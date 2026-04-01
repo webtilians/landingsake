@@ -433,7 +433,7 @@ address {
 
   /* Firma + textos: separación del logo */
   .hero__center {
-    margin-top: 1vh;
+    margin-top: 5vh;
   }
 
   .hero__center-img {
